@@ -1,0 +1,7 @@
+:root {
+    --mainColour: rgb(0, 0, 0);
+    --textColour: rgb(255, 255, 255);
+    --textColourAlt: rgb(0, 0, 0);
+    --accentColour: rgba(255, 255, 255, 0.25);
+}
+  
