@@ -5,7 +5,7 @@ const factList = [
     "You may witness chronic symptoms if you eat 274 bananas a day for seven years.",
     "Bananas are one of the most popular fruits in the world.",
     "Bananas are one of the oldest fruits grown by humans.",
-    "The word 'banana' comes from the Arabic word 'banana', which means 'finger'.",
+    "The word 'banana' comes from the Arabic word 'banan', which means 'finger'.",
     "There are more than 1,000 different varieties of bananas around the world.",
     "Some varieties of bananas are edible only when cooked.",
     "Some bananas are blue or purple, instead of yellow.",
@@ -18,5 +18,11 @@ const factList = [
     "Bananas are an ingredient in many traditional dishes, such as curries with chicken and bananas, giving them a sweet and sour flavor and creamy texture.",
     "Bananas have many medicinal properties.",
     "I stole your banana! Don't belive me? Here it is : 🍌",
-    "🍌🦍"
+    "🍌🦍",
+    "Bananas know what you did..",
+    "Banana council has decided your fate.",
+    "Harambe has a big... really big banana.",
+    "Someone once touched Harambe banana.. his body was never found",
+    "Bananas are in color of yellow, so was the pope",
+    "Check your pants"
 ]
