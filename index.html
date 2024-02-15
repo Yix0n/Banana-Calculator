@@ -7,85 +7,107 @@
     <meta name="description" content="Welcome to my website, where you can easily calculate your weight and height.... in bananas! With our simple calculator, you will find out how many bananas you need to equalize your weight and height. Check it out right now and surprise yourself with the result!">
     <meta name="keywords" content="Banana, Metrics, Weight to Banana, Banana to Weight, Height to Banana, Banana to Height">
     <meta name="author" content="Discord: @nakize">
-    <meta name="color-scheme" content="dark">
+    <meta name="color-scheme" content="dark light">
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito"
       rel="stylesheet"
     />
+    <link 
+      rel="stylesheet" 
+      href="./css/amoled.css"
+      id="themeLink"
+    />
     <style>
-      @import url("./css/amoled.css");
       @import url("./css/style.css");
     </style>
     <title>Banana Calculator</title>
   </head>
   <body>
+    <header>
+      <button id="theme_button">​​</button>
+      <label id="locale_label" for="locale_selector">​​</label>
+      <select name="locale_selector" id="locale_selector">
+        <option value="en">English 🇬🇧</option>
+        <option value="pl">Polski 🇵🇱</option>
+        <option value="jp">日本語 🇯🇵</option>
+        <option value="de">Deutsch 🇩🇪</option>
+      </select>
+
+      <a href="https://github.com/Yix0n/Banana-Calculator">GitHub</a>
+    </header>
     <main>
       <div class="things">
-        <h2>Height to Banana</h2>
+        <h2 id="htb_title">​​</h2>
         <div>
-          <input type="number" name="" id="htbInput" /> <br>
-          <label for="htbFrom">From</label>
-          <input list="heightMetrics" id="htbFrom" name="htbFrom" placeholder="cm"> <br>
-          <p id="htbResult">​​</p>
-          <button id="htbButton">Calculate</button>
+          <input type="number" name="" id="htb_input" /> <br>
+          <label id="htb_label" for="htb_metrics">​​</label>
+          <input list="heightMetrics" id="htb_metrics" name="htb_metrics" placeholder="cm"> <br>
+          <p id="htb_result">​​</p>
+          <button id="htb_button">​​</button>
         </div>
       </div>
       <div class="things">
-        <h2>Banana to Height</h2>
+        <h2 id="bth_title">​​</h2>
         <div>
-          <input type="number" name="" id="bthInput" /> bananas <br>
-          <label for="bthTo">To</label>
-          <input list="heightMetrics" id="bthTo" name="htbTo" placeholder="cm">
-          <p id="bthResult">​​</p>
-          <button id="bthButton">Calculate</button>
+          <input type="number" name="" id="bth_input" /> <p id="bth_banana">​​</p> <br>
+          <label id="bth_label" for="bth_metrics">To</label>
+          <input list="heightMetrics" id="bth_metrics" name="bth_metrics" placeholder="cm">
+          <p id="bth_result">​​</p>
+          <button id="bth_button">​​</button>
         </div>
       </div>
 
       <div class="things">
-        <h2>Weight to Banana</h2>
+        <h2 id="wtb_title">​​</h2>
         <div>
-          <input type="number" name="" id="wtbInput" /> <br>
-          <label for="wtbFrom">From</label>
-          <input list="weightMetrics" id="wtbFrom" name="wtbFrom" placeholder="kg">
-          <p id="wtbResult">​​</p>
-          <button id="wtbButton">Calculate</button>
+          <input type="number" name="" id="wtb_input" /> <br>
+          <label id="wtb_label" for="wtb_metrics">​​</label>
+          <input list="weightMetrics" id="wtb_metrics" name="wtb_metrics" placeholder="kg">
+          <p id="wtb_result">​​</p>
+          <button id="wtb_button">​​</button>
         </div>
       </div>
       <div class="things">
-        <h2>Banana to Weight</h2>
+        <h2 id="btw_title">​​</h2>
         <div>
-          <input type="number" name="" id="btwInput" /> bananas <br>
-          <label for="btwTo">To</label>
-          <input list="weightMetrics" id="btwTo" name="btwTo" placeholder="kg">
+          <input type="number" name="" id="btw_input" /> <p id="btw_banana">​​</p> <br>
+          <label id="btw_label" for="btw_metrics">​​</label>
+          <input list="weightMetrics" id="btw_metrics" name="btw_metrics" placeholder="kg">
           <p id="btwResult">​​</p>
-          <button id="btwButton">Calculate</button>
+          <button id="btw_button">​​</button>
         </div>
       </div>
     </main>
     <footer>
-      Did you know..
-      <p id="factPara"></p>
+      <p id="dyk">​​</p>
+      <p id="fact_para">​​</p>
     </footer>
 
     <datalist id="heightMetrics">
-      <option value="cm" default>Centimeters</option>
-      <option value="mm">Milimeters</option>
-      <option value="m">Meters</option>
-      <option value="feet">Feet</option>
-      <option value="inch">Inch</option>
+      <option id="cm" value="cm" default>Centimeters</option>
+      <option id="mm" value="mm">Milimeters</option>
+      <option id="m" value="m">Meters</option>
+      <option id="feet" value="feet">Feet</option>
+      <option id="inch" value="inch">Inch</option>
     </datalist>
 
     <datalist id="weightMetrics">
-      <option value="kg" default>Kilogram</option>
-      <option value="g">Gram</option>
-      <option value="t">Tons</option>
-      <option value="pound">Pound</option>
-      <option value="ounce">Ounce</option>
+      <option id="kg" value="kg" default>Kilogram</option>
+      <option id="g" value="g">Gram</option>
+      <option id="t" value="t">Tons</option>
+      <option id="pound" value="pound">Pound</option>
+      <option id="ounce" value="ounce">Ounce</option>
     </datalist>
 
-    <!--  -->
+    <script src="./locale/en.js"></script>
+    <script src="./locale/pl.js"></script>
+    <script src="./locale/jp.js"></script>
+    <script src="./locale/de.js"></script>
 
     <script src="./js/banana-fact.js"></script>
+    <script src="./js/prefs.js"></script>
+
     <script src="./js/script.js"></script>
   </body>
 </html>
+

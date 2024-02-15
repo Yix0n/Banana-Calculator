@@ -128,15 +128,15 @@ const convertWeight = (amount, fromUnit = "kg", toUnit = "kg") => {
 };
 
 // Obsługa interakcji użytkownika
-const htbButton = document.getElementById("htbButton");
-const bthButton = document.getElementById("bthButton");
-const wtbButton = document.getElementById("wtbButton");
-const btwButton = document.getElementById("btwButton");
+const htbButton = document.getElementById("htb_button");
+const bthButton = document.getElementById("bth_button");
+const wtbButton = document.getElementById("wtb_button");
+const btwButton = document.getElementById("btw_button");
 
 htbButton.onclick = () => { 
-    const htbResult = document.getElementById("htbResult");
-    const htbInput = document.getElementById("htbInput").value;
-    const htbFrom = document.getElementById("htbFrom").value;
+    const htbResult = document.getElementById("htb_result");
+    const htbInput = document.getElementById("htb_input").value;
+    const htbFrom = document.getElementById("htb_metrics").value;
 
     const result = convertHeight(Number(htbInput), htbFrom, "banana");
     
@@ -144,9 +144,9 @@ htbButton.onclick = () => {
 };
 
 bthButton.onclick = () => { 
-    const bthResult = document.getElementById("bthResult");
-    const bthInput = document.getElementById("bthInput").value;
-    const bthTo = document.getElementById("bthTo").value;
+    const bthResult = document.getElementById("bth_result");
+    const bthInput = document.getElementById("bth_input").value;
+    const bthTo = document.getElementById("bth_metrics").value;
 
     const result = convertHeight(Number(bthInput), "banana", bthTo);
 
@@ -154,9 +154,9 @@ bthButton.onclick = () => {
 };
 
 wtbButton.onclick = () => {
-    const wtbResult = document.getElementById("wtbResult");
-    const wtbInput = document.getElementById("wtbInput").value;
-    const wtbFrom = document.getElementById("wtbFrom").value;
+    const wtbResult = document.getElementById("wtb_result");
+    const wtbInput = document.getElementById("wtb_input").value;
+    const wtbFrom = document.getElementById("wtb_from").value;
 
     const result = convertWeight(Number(wtbInput), wtbFrom, "banana");
 
@@ -164,13 +164,13 @@ wtbButton.onclick = () => {
 };
 
 btwButton.onclick = () => { 
-    const btwResult = document.getElementById("btwResult");
-    const btwInput = document.getElementById("btwInput").value;
-    const btwTo = document.getElementById("btwTo").value;
+    const btwResult = document.getElementById("btw_result");
+    const btwInput = document.getElementById("btw_input").value;
+    const btwTo = document.getElementById("btw_metrics").value;
 
     const result = convertWeight(Number(btwInput), "banana", btwTo);
 
     btwResult.innerText = `= ${result} ${btwTo}`;
 };
 
-factPara.innerText = factList[Math.floor(Math.random() * factList.length)];
+document.getElementById("fact_para").innerText = factList["en"][Math.floor(Math.random() * factList["en"].length)];
