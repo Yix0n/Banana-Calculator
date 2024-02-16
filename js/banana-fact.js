@@ -29,5 +29,6 @@ const factList = {
         "Most of these facts are translated",
         "NaN"
     ]
-
 }
+
+document.getElementById("fact_para").innerText = factList["en"][Math.floor(Math.random() * factList["en"].length)];

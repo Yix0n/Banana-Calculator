@@ -1,10 +1,15 @@
 // Theme
 let theme = window.localStorage.getItem("theme");
 
-window.onload = () => {
-    loadTheme()
-    loadLocale()
-}
+document.onreadystatechange = function(e)
+{
+    if (document.readyState === 'complete')
+    {
+        
+        loadTheme()
+        loadLocale()
+    }
+};
 
 document.getElementById("theme_button").onclick = () => {
     changeTheme()
@@ -28,8 +33,6 @@ const changeTheme = () => {
     window.localStorage.setItem("theme", theme)
 
 }
-
-// Locale
 
 // Locale
 

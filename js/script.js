@@ -172,5 +172,3 @@ btwButton.onclick = () => {
 
     btwResult.innerText = `= ${result} ${btwTo}`;
 };
-
-document.getElementById("fact_para").innerText = factList["en"][Math.floor(Math.random() * factList["en"].length)];
